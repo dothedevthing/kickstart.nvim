@@ -3,7 +3,21 @@
 -- config. This will add also the recommended keymaps.
 
 return {
-  {
+
+	-- See `:help gitsigns` to understand what the configuration keys do
+	{ -- Adds git related signs to the gutter, as well as utilities for managing changes
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			signs = {
+				add = { text = "+" },
+				change = { text = "~" },
+				delete = { text = "_" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
+			},
+		},
+
+		--[[
     'lewis6991/gitsigns.nvim',
     opts = {
       on_attach = function(bufnr)
@@ -57,5 +71,8 @@ return {
         map('n', '<leader>tD', gitsigns.preview_hunk_inline, { desc = '[T]oggle git show [D]eleted' })
       end,
     },
-  },
+  -- ]]
+	},
 }
+
+-- vim: ts=2 sts=2 sw=2 et
