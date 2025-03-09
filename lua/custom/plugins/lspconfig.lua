@@ -235,6 +235,18 @@ return {
             },
           },
         },
+
+         pylsp = {
+          on_attach = custom_attach,
+          settings = {
+            pylsp = {
+              plugins = {
+                pycodestyle = { enabled = false },
+              },
+            },
+          },
+        },
+
       }
 
       -- Ensure the servers and tools above are installed
