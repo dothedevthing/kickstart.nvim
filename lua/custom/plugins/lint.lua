@@ -56,6 +56,24 @@ return {
 					end
 				end,
 			})
+
+			vim.keymap.set("n", "<leader>lf", function()
+				lint.try_lint()
+			end, { desc = "[L]int current [F]ile" })
+
+			vim.keymap.set("n", "<leader>ls", function()
+				lint.try_lint("cspell")
+			end, { desc = "[L]int with c[S]pell" })
+
+			require("lint").linters.pylint.args = {
+				"--rcfile=~/Work/pylintrc",
+				"-f",
+				"json",
+				"--from-stdin",
+				function()
+					return vim.api.nvim_buf_get_name(0)
+				end,
+			}
 		end,
 	},
 }
