@@ -48,6 +48,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<n>", "nzzzv")
 vim.keymap.set("n", "<N>", "Nzzzv")
 
+-- Reselect previously highlighted text after indent
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
