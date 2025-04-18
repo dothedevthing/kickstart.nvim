@@ -2,10 +2,10 @@ require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
-	require 'custom/plugins/autopairs',
+	require("custom/plugins/autopairs"),
 	require("custom/plugins/cmp"),
 	require("custom/plugins/conform"),
-	require 'custom/plugins/debug',
+	require("custom/plugins/debug"),
 	require("custom/plugins/gitsigns"),
 	require("custom/plugins/indent_line"),
 	require("custom/plugins/lint"),
@@ -17,6 +17,7 @@ require("lazy").setup({
 	require("custom/plugins/tokyonight"),
 	require("custom/plugins/treesitter"),
 	require("custom/plugins/which-key"),
+	require("custom/plugins/neogen"),
 
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the

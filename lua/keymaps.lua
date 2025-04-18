@@ -48,6 +48,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<n>", "nzzzv")
 vim.keymap.set("n", "<N>", "Nzzzv")
 
+-- Generate docs for current scope with Neogen
+vim.keymap.set("n", "<Leader>n", ":lua require('neogen').generate()<CR>", { noremap = true, silent = true })
 -- Reselect previously highlighted text after indent
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
